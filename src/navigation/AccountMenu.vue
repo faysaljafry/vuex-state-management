@@ -20,9 +20,13 @@
 export default {
   data() {
     return {
-      user: null,
       showMenu: false,
     };
+  },
+  Computed: {
+    user() {
+      return this.$store.state.user;
+    },
   },
   methods: {
     signOut() {
